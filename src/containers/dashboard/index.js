@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import { incrementDummyValue } from '../../actions/Dummy';
 import './assets/dashboard.css';
 
@@ -11,7 +12,7 @@ export class VisibleDashboard extends Component {
     return (
       <div className='App'>
         <header className='App-header'>
-          <h1 className='App-title'>Dummy Title</h1>
+          <h1 className='App-title'><FormattedMessage id='dashboard.title' /></h1>
         </header>
         <p className='App-body'>
           Dummy Body
