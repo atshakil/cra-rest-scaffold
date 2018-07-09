@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { incrementDummyValue } from '../../actions/Dummy';
 import './assets/dashboard.css';
 
@@ -26,4 +27,4 @@ const mapStateToProps = state => ({
   dummyValue: state.dummy.dummyValue
 });
 
-export default connect(mapStateToProps, { incrementDummyValue })(VisibleDashboard);
+export default withRouter(connect(mapStateToProps, { incrementDummyValue })(VisibleDashboard));
