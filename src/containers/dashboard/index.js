@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
-import { incrementDummyValue } from '../../actions/Dummy';
+import { incrementDummyValue, updateDummyValue } from '../../actions/Dummy';
 import './assets/dashboard.css';
 
 export class VisibleDashboard extends Component {
+  componentDidMount() {
+    const { updateDummyValue } = this.props;
+    updateDummyValue && updateDummyValue();
+  }
+
   render() {
     const { dummyValue, incrementDummyValue } = this.props;
 
@@ -28,4 +33,4 @@ const mapStateToProps = state => ({
   dummyValue: state.dummy.dummyValue
 });
 
-export default withRouter(connect(mapStateToProps, { incrementDummyValue })(VisibleDashboard));
+export default withRouter(connect(mapStateToProps, { incrementDummyValue, updateDummyValue })(VisibleDashboard));

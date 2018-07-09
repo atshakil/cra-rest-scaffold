@@ -1,0 +1,42 @@
+{
+  "swagger": "2.0",
+  "info": {
+      "version": "",
+      "title": "Dummy",
+      "description": ""
+  },
+  "basePath": "/v1",
+  "paths": {
+      "/dummy": {
+          "get": {
+              "operationId": "GET_dummy",
+              "summary": "Dummy",
+              "consumes": [
+                  "application/json"
+              ],
+              "produces": [
+                  "application/json"
+              ],
+              "responses": {
+                  "200": {
+                      "description": "",
+                      "schema": {
+                          "type": "object",
+                          "properties": {
+                              "value": {
+                                  "type": "integer",
+                                  "minimum": 1,
+                                  "maximum": 100
+                              }
+                          },
+                          "required": [
+                              "value"
+                          ]
+                      }
+                  }
+              }
+          }
+      }
+  },
+  "definitions": {}
+}

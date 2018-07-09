@@ -4,6 +4,7 @@ const Path = {
   dashboard: '/dashboard',
   root: '/',
   api: {
+    dummy: '/dummy'
   }
 };
 
